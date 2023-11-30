@@ -13,8 +13,7 @@ export default function AdminDrawer() {
                 (props) => <CustomDrawer {...props}
                     email={'test'}
                     fullname={'test'}
-                />
-            }
+                />}
             screenOptions={{
                 drawerActiveBackgroundColor: '#2B32CE',
                 drawerActiveTintColor: '#fff',

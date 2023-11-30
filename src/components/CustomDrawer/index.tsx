@@ -4,7 +4,6 @@ import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawe
 import { Icon } from 'react-native-paper';
 import { styles } from './styles';
 import { useAuth } from '../../context/AuthContext';
-import LogoWhite from '../../../assets/images/logo-white.svg';
 import Account from '../../../assets/images/account.svg';
 export default function CustomDrawer(props: any) {
     const { onLogout } = useAuth();
@@ -13,18 +12,11 @@ export default function CustomDrawer(props: any) {
             <DrawerContentScrollView
                 contentContainerStyle={{ backgroundColor: '#2B32CE' }}
                 {...props}>
-                {true ? (
-                    <View style={styles.header}>
-                        <Account width={80} height={80} />
-                        <Text style={styles.textTitle}>f</Text>
-                        <Text style={styles.text}>f</Text>
-                    </View>
-                ) : (
-                    <View style={styles.header}>
-                        <LogoWhite width={190} height={80} />
-                        <Text style={styles.text}>f</Text>
-                    </View>
-                )}
+                <View style={styles.header}>
+                    <Account width={80} height={80} />
+                    <Text style={styles.textTitle}>f</Text>
+                    <Text style={styles.text}>f</Text>
+                </View>
 
                 <View style={styles.body}>
                     <DrawerItemList

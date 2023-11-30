@@ -3,10 +3,11 @@ import React from 'react'
 
 interface Props {
     readonly text: string,
-    readonly onPress: () => void
+    readonly onPress: () => void,
+    readonly disabled: boolean
 }
 
-export default function CustomButton({ text, onPress }: Props) {
+export default function CustomButton({ text, onPress, disabled }: Props) {
     return (
         <View>
             <TouchableOpacity
@@ -21,6 +22,7 @@ export default function CustomButton({ text, onPress }: Props) {
                     width: "100%",
 
                 }}
+                disabled={disabled}
             >
                 <Text style={{
                     textAlign: 'center',

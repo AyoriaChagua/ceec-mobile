@@ -1,9 +1,12 @@
 export interface AuthProps {
-    userToken?: string | null
-    onLogin?: (email: string, password: string) => void;
+    userToken?: string | null;
+    onLogin?: (email: string, password: string) => any;
     onLogout?: () => void;
-    errorMessage?: string | null;
     isLoading?: boolean;
-    isLoggedIn?: () => Promise<void> | undefined;
-    role?: string,
+    error?: string | null;
+    userInfo?: {
+        id: number,
+        role: number,
+        email: string
+    } | string | null
 }
